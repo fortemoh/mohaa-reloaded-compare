@@ -66,7 +66,7 @@ footer a { color: var(--muted); }
 </header>
 <main id="list"></main>
 <footer>
-  <p>Screenshots at 1920&times;1080 from the macOS builds on an Apple M4, a bot match on Stalingrad (Team Deathmatch).
+  <p>Screenshots at 1920&times;1080 from the macOS builds on an Apple M4, the match pictures from a bot match on The Bridge (Objective).
     Before: <a href="https://github.com/fortemoh/MoHAA-Reloaded">OpenMoHAA for macOS</a> with the stock menus and HUD.
     After: MoHAA Reloaded, in development. Medal of Honor: Allied Assault is &copy; Electronic Arts; its art appears here
     only as screenshots. OpenMoHAA is GPL-2.0.</p>
@@ -85,20 +85,20 @@ const PAIRS = [
     text: "Display mode, resolution, frame cap, filtering and effects in one place, each with a one-line explanation." },
   { id: "audio", short: "Audio", title: "Audio", before: "stockmenu2_audio.jpg", after: "rlmenu_audio.jpg",
     text: "Volume, music, speakers or headphones, and sound quality." },
-  { id: "load", short: "Loading", title: "Loading screen", before: "stockload_load.jpg", after: "rlload_load.jpg",
+  { id: "load", short: "Loading", title: "Loading screen", before: "obj_stock_load.jpg", after: "obj_rl_load.jpg",
     text: "The map's picture, name and game type with a progress bar. There's no CONTINUE button: the match starts as soon as the map is loaded." },
-  { id: "team", short: "Team pick", title: "Picking a team", before: "stockmatch_teamselect.jpg", after: "rlmatch_teamselect.jpg",
-    text: "Stock asks for the team and then the weapon in two menus. Reloaded does both on one page, with your soldier beside it." },
-  { id: "weapon", short: "Weapon pick", title: "Picking a weapon", before: "stockmatch_weaponselect.jpg", after: "rlmatch_weaponselect.jpg",
+  { id: "team", short: "Team pick", title: "Picking a team", before: "obj_stock_team.jpg", after: "obj_rl_team.jpg",
+    text: "Stock asks for the team and then the weapon in two menus. Reloaded does both on one page, with your soldier beside it and the round's time left." },
+  { id: "weapon", short: "Weapon pick", title: "Picking a weapon", before: "obj_stock_weapon.jpg", after: "obj_rl_weapon.jpg",
     text: "Each weapon by name and role (rifle, sniper, submachine gun, machine gun, anti-tank, shotgun), and the soldier's look below." },
-  { id: "hud", short: "HUD (CS:GO)", title: "HUD, CS:GO style", before: "stockmatch_hud.jpg", after: "rlmatch_hud.jpg",
-    text: "Health and ammo in the bottom corners, the weapons you carry on the right, a radar with your teammates, the score and timer at the top, and chat and the kill feed in their own places. The same spot on the map in both." },
-  { id: "hudcs2", short: "HUD (CS2)", title: "HUD, CS2 style", before: "stockmatch_hud.jpg", after: "rlmatch_hudcs2.jpg",
+  { id: "hud", short: "HUD (CS:GO)", title: "HUD, CS:GO style", before: "obj_stock_hud.jpg", after: "obj_rl_hud.jpg",
+    text: "Health and ammo in the bottom corners, the weapons you carry on the right, a radar with your teammates, and at the top the round's time left, the score and a card for every player, greyed out once they're dead. The kill feed is at the top right. The same spot on the map in both." },
+  { id: "hudcs2", short: "HUD (CS2)", title: "HUD, CS2 style", before: "obj_stock_hud.jpg", after: "obj_rl_hudcs2.jpg",
     text: "The other HUD style: health and ammo in one strip along the bottom middle, with your team's badge." },
-  { id: "scores", short: "Scoreboard", title: "Scoreboard", before: "stockmatch_scores.jpg", after: "rlmatch_scores.jpg",
-    text: "Both teams and every player's kills and deaths. Reloaded's has each team's score up front, a K/D column, and your own row highlighted." },
-  { id: "esc", short: "Esc menu", title: "In-game menu (Esc)", before: "stockmatch_esc.jpg", after: "rlmatch_esc.jpg",
-    text: "Resume, main menu, team and weapon, options, spectate, disconnect and quit, over a blurred view of the game." },
+  { id: "scores", short: "Scoreboard", title: "Scoreboard", before: "obj_stock_scores.jpg", after: "obj_rl_scores.jpg",
+    text: "Both teams and every player's kills. Reloaded's puts each team's score and how many are still alive up front, shows the time left, greys out the dead and highlights your own row." },
+  { id: "esc", short: "Esc menu", title: "In-game menu (Esc)", before: "obj_stock_esc.jpg", after: "obj_rl_esc.jpg",
+    text: "The map, game type and time left, then resume, main menu, team and weapon, options, spectate, disconnect and quit, over a blurred view of the game." },
 ];
 const list = document.getElementById("list"), toc = document.getElementById("toc");
 function slider(p) {
