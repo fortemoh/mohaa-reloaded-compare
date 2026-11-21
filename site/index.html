@@ -71,14 +71,14 @@ footer a { color: var(--muted); }
     only as screenshots. OpenMoHAA is GPL-2.0.</p>
 </footer>
 <script>
-const V = "3"; // bumped when pictures change, so browsers fetch them again
+const V = "4"; // bumped when pictures change, so browsers fetch them again
 const PAIRS = [
   { id: "main", short: "Main menu", title: "Main menu", before: "stockmenu_main.jpg", after: "rlmenu_main.jpg",
     text: "The stock main menu is a room: you hover over objects to find the pages. Reloaded opens straight on the server list, with the pages down the left and your name and soldier on the right." },
   { id: "servers", short: "Server browser", title: "Server browser", before: "stockmenu2_servers.jpg", after: "rlmenu_main.jpg",
     text: "Stock: Multiplayer, Join Internet Game, Browse Internet Servers, then a plain list. Reloaded: the same live list is the home page, with game-type filters, a search box and favourites." },
   { id: "options", short: "Options", title: "Options", before: "stockmenu_options.jpg", after: "rlmenu_hud.jpg",
-    text: "Stock: a desk of radios, each one a separate page. Reloaded: one page with five tabs (Controls, Video, Audio, Gameplay, HUD). The HUD tab is new: HUD style, font, size, colour, crosshair and hitmarker, with a live crosshair preview." },
+    text: "Stock: a desk of radios, each one a separate page. Reloaded: one page with five tabs (Controls, Video, Audio, Gameplay, HUD). The HUD tab is new: HUD style (CS:GO, CS2 or Classic), font, size, colour, crosshair and hit sound, with a live crosshair preview." },
   { id: "controls", short: "Controls", title: "Controls", before: "stockmenu_controls.jpg", after: "rlmenu_controls.jpg",
     text: "Every key on one screen, grouped by what it does, with mouse sensitivity at the top." },
   { id: "video", short: "Video", title: "Video", before: "stockmenu2_video.jpg", after: "rlmenu_video.jpg",
@@ -95,6 +95,8 @@ const PAIRS = [
     text: "Health and ammo in the bottom corners, the weapons you carry on the right, a radar with your teammates, and at the top the round's time left, the score and a card for every player, greyed out once they're dead. The kill feed is at the top right. The same spot on the map in both." },
   { id: "hudcs2", short: "HUD (CS2)", title: "HUD, CS2 style", before: "obj_stock_hud.jpg", after: "obj_rl_hudcs2.jpg",
     text: "The other HUD style: health and ammo in one strip along the bottom middle, with your team's badge." },
+  { id: "hudclassic", short: "HUD (Classic)", title: "HUD, Classic style", before: "obj_stock_hud.jpg", after: "obj_rl_hudclassic.jpg",
+    text: "The third style keeps the original game's layout in the new look: the chat and kill messages along the top beside the radar, where the stock HUD writes them beside its compass, and the round's time and score at the top right, with no player cards." },
   { id: "scores", short: "Scoreboard", title: "Scoreboard", before: "obj_stock_scores.jpg", after: "obj_rl_scores.jpg",
     text: "Both teams and every player's kills. Reloaded's puts each team's score and how many are still alive up front, shows the time left, greys out the dead and highlights your own row." },
   { id: "esc", short: "Esc menu", title: "In-game menu (Esc)", before: "obj_stock_esc.jpg", after: "obj_rl_esc.jpg",
