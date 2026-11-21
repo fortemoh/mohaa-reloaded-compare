@@ -65,12 +65,13 @@ footer a { color: var(--muted); }
 </header>
 <main id="list"></main>
 <footer>
-  <p>Screenshots at 1920&times;1080 from the macOS builds on an Apple M4, the match pictures from a bot match on The Bridge (Objective).
+  <p>Screenshots at 1920&times;1080 from the macOS builds on an Apple M4, the match pictures from a bot match on The Bridge (Objective). Both sides light players and guns flat (<code>r_fastentlight 1</code>, Reloaded's default).
     Before: <a href="https://github.com/fortemoh/MoHAA-Reloaded">OpenMoHAA for macOS</a> with the stock menus and HUD.
     After: MoHAA Reloaded, in development. Medal of Honor: Allied Assault is &copy; Electronic Arts; its art appears here
     only as screenshots. OpenMoHAA is GPL-2.0.</p>
 </footer>
 <script>
+const V = "3"; // bumped when pictures change, so browsers fetch them again
 const PAIRS = [
   { id: "main", short: "Main menu", title: "Main menu", before: "stockmenu_main.jpg", after: "rlmenu_main.jpg",
     text: "The stock main menu is a room: you hover over objects to find the pages. Reloaded opens straight on the server list, with the pages down the left and your name and soldier on the right." },
@@ -103,8 +104,8 @@ const list = document.getElementById("list"), toc = document.getElementById("toc
 function slider(p) {
   const box = document.createElement("div");
   box.className = "cmp";
-  box.innerHTML = `<img src="img/${p.after}" alt="After: ${p.title}, MoHAA Reloaded" loading="lazy">
-    <img class="top" src="img/${p.before}" alt="Before: ${p.title}, stock OpenMoHAA" loading="lazy">
+  box.innerHTML = `<img src="img/${p.after}?v=${V}" alt="After: ${p.title}, MoHAA Reloaded" loading="lazy">
+    <img class="top" src="img/${p.before}?v=${V}" alt="Before: ${p.title}, stock OpenMoHAA" loading="lazy">
     <div class="bar"></div><div class="knob">&#8596;</div>
     <input type="range" min="0" max="100" value="50" step="0.1" aria-label="Before and after: ${p.title}">`;
   const range = box.querySelector("input");
@@ -124,7 +125,7 @@ for (const p of PAIRS) {
   const row = document.createElement("div");
   row.className = "row";
   row.innerHTML = `<button data-v="100">Before</button><button data-v="50">Half</button><button data-v="0">After</button>
-    <span>Full size: <a href="img/${p.before}">before</a> &middot; <a href="img/${p.after}">after</a></span>`;
+    <span>Full size: <a href="img/${p.before}?v=${V}">before</a> &middot; <a href="img/${p.after}?v=${V}">after</a></span>`;
   row.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
     box.querySelector("input").value = b.dataset.v;
     box.style.setProperty("--pos", b.dataset.v + "%");
